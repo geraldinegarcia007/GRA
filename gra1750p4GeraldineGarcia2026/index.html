@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wedding Invitation</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+/* ---------- CSS body and wrapper ---------- */
+body {
+  margin: 0;
+  padding: 0;
+}
+#wrapper {
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- COLOR PALETTE  ----------
+   Cream      #FAF5EC
+   Beige      #E6DACB
+   White      #FFFFFF
+   Taupe      #A08C7A   (borders and accents)
+   Dark brown #5C4A3A   (text and headings)
+------------------------------------------------- */
+
+/* ---------- BODY ---------- */
+body {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 1rem;
+  color: #5C4A3A;
+  background-color: #E6DACB;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* ---------- HEADER ---------- */
+header {
+  width: 80%;
+  max-width: 900px;
+  margin-left: 5%;
+  padding: 40px 30px 20px 30px;
+  background-color: rgba(250, 245, 236, 0.92);
+  border-bottom: 4px solid #A08C7A;
+}
+h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size:(2.5rem, 8vw, 5rem);
+  font-weight: 700;
+  color: #5C4A3A;
+  margin: 0;
+  line-height: 1.1;
+}
+h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size:(1.4rem, 4vw, 2.2rem);
+  font-weight: 400;
+  color: #A08C7A;
+  margin: 10px 0 0 0;
+}
+
+nav {
+  width: 80%;
+  max-width: 900px;
+  margin-left: 5%;
+  padding: 10px 30px;
+  background-color: #A08C7A;
+}
+nav a {
+  color: #FFFFFF;
+  font-weight: 600;
+  text-decoration: none;
+  margin-right: 25px;
+}
+nav a:hover;
+nav a:focus; {
+  text-decoration: underline;
+}
+
+/* ---------- MAIN CONTENT ---------- */
+main {
+  width: 80%;
+  max-width: 900px;
+  margin-left: 5%;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.94);
+  overflow: auto;                             
+}
+h3 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(1.4rem, 3.5vw, 2rem);
+  color: #5C4A3A;
+  margin: 25px 0 10px 0;
+}
+h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #A08C7A;
+  margin: 0;
+}
+h5 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #5C4A3A;
+  margin: 20px 0 5px 0;
+}
+h6 {
+  font-size: 0.85rem;
+  font-weight: 400;
+  font-style: italic;
+  color: #5C4A3A;
+  margin: 15px 0 0 0;
+}
+p {
+  margin: 0 0 15px 0;
+}
+
+/* ---------- FLOAT: detail boxes side by side ---------- */
+.detail-box {
+  float: left;
+  width: 30%;
+  margin-right: 3%;
+  margin-bottom: 15px;
+  padding: 15px;
+  background-color: #FAF5EC;
+  border: 2px solid #E6DACB;
+  box-sizing: border-box;
+}
+.detail-box p {
+  margin: 5px 0 0 0;
+}
+.clear {
+  clear: both;
+}
+
+footer {
+  width: 80%;
+  max-width: 900px;
+  margin-left: 5%;
+  margin-bottom: 40px;
+  padding: 20px 30px;
+  background-color: #E6DACB;
+  border-top: 4px solid #A08C7A;
+}
+footer p {
+  font-size: 0.75rem;
+  margin: 0;
+}
+
+/* ---------- phones and small screens ---------- */
+@media (max-width: 700px) {
+  header, nav, main, footer {
+    width: 92%;
+    margin-left: 4%;
+    box-sizing: border-box;
+  }
+  .detail-box {
+    float: none;
+    width: 100%;
+    margin-right: 0;
+  }
+  nav a {
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+}
+</style>
+</head>
+
+<body>
+<div id="wrapper">
+
+  <header>
+    <h1>Maria and Daniel</h1>
+    <h2>Thursday, March 25th, 2026</h2>
+  </header>
+
+  <nav>
+    <a href="#ceremony">Ceremony</a>
+    <a href="#reception">Reception</a>
+    <a href="#rsvp">RSVP</a>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main>
+
+    <div class="image-space"><img src="../wedding project/maria and daniel wedding.png" alt="maria and daniel holding hands" style="width: 100%;></div>
+
+    <section id="ceremony">
+      <h3>Our Ceremony</h3>
+      <p>We would love for you to join us as we celebrate our wedding day with family and friends. Creating unforgettable memories in one single night.</p>
+
+      <div class="detail-box">
+        <h4>Date and Time</h4>
+        <p>03.25.27 | 2 PM</p>
+      </div>
+      <div class="detail-box">
+        <h4>The Estate on the Halifax</h4>
+        <p>5123 S Ridgewood Ave, Port Orange, FL 32127</p>
+      </div>
+      <div class="detail-box">
+        <h4>Dress Code</h4>
+        <p>Semi-formal. Soft neutral and warm colors are welcome.</p>
+      </div>
+      <div class="clear"></div>
+    </section>
+
+    <div class="image-space"><img src="file:///macintosh%20hd/Users/gg/Desktop/wedding%20project/wedding%20rings.png" style="width: 100%;/>"</div>
+
+    <section id="reception">
+      <h3>Reception</h3>
+      <p>Dinner and dancing will follow at the Wooden House, starting at 6:00 PM.</p>
+    </section>
+
+    <section id="rsvp">
+      <h5>Please RSVP</h5>
+      <p>Reply by January 5, 2027 at maria.daniels.wedding@gmail.com</p>
+      <h6>We can't wait to celebrate with you!</h6>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© Geraldine Garcia, 2026. This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.</p>
+  </footer>
+
+</div>
+</body>
+</html>
