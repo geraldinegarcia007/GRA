@@ -1,71 +1,444 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>IHOP | Geraldine Garcia, 2026</title>
-	<style>
-		@font-face {
-    font-family: 'soreanbold';
-    src: url('sorean_bold-webfont.woff2') format('woff2'),
-         url('sorean_bold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Green Bowl Salad Co. | Menu</title>
 
+<!-- Google Web Fonts: Fredoka for headings, Nunito for paragraphs -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+/* ---------- Adobe Color palette (Fresh Garden) ----------
+   Dark leaf green:  #2E5E3E
+   Lime green:       #A7C957
+   Cream:            #F2E8CF
+   Tomato red:       #BC4749
+   Deep forest:      #1F3D2B
+---------------------------------------------------------- */
+
+/* makes widths and padding add up the same way on every device */
+* {
+    box-sizing: border-box;
 }
-		body{
-			margin: 0;
-			background-color: cornflowerblue;
-			font-family: 'soreanbold';
-		}
-		wrapper{
-			width: 500px; 
-			display: block;
-			margin: auto;
-			background-color: rgba(255,255,255,0.50);
-			padding: 20px;
-		}
-		header{
-			background-color: crimson;
-		}
-		.topwrapper{
-			background-color:transparent;
-		}
-	</style>
+
+/* CSS reset for body and wrapper */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #1F3D2B;
+    background-color: #2E5E3E; /* backup color in case the photo doesn't load */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    -webkit-text-size-adjust: 100%; /* stops phones from resizing the text */
+}
+
+#wrapper {
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+    max-width: 960px; /* full width on phones, stops growing at 960px on desktop */
+}
+
+/* ---------- Header ---------- */
+header {
+    padding: 30px 0 20px 0;
+    overflow: hidden; /* clears the floats inside the header */
+}
+
+header h1 {
+    float: left;
+    margin: 0;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 52px;
+    font-weight: 600;
+    line-height: 1.05;
+    color: #F2E8CF;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45); /* made with CSS3Gen */
+}
+
+header nav {
+    float: right;
+    margin-top: 22px;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header nav li {
+    display: inline-block;
+    margin-left: 12px;
+}
+
+header nav a {
+    display: block;
+    padding: 8px 18px;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 18px;
+    color: #1F3D2B;
+    text-decoration: none;
+    background-color: #A7C957;
+    -webkit-border-radius: 20px;
+    border-radius: 20px; /* made with CSS3Gen */
+}
+
+/* ---------- Main and sections ---------- */
+section {
+    margin: 0 0 25px 0;
+    padding: 30px 35px;
+    overflow: hidden; /* clears the floats inside each section */
+    background-color: #F2E8CF;
+    -webkit-border-radius: 0 50px 0 0;
+    border-radius: 0 50px 0 0;
+}
+
+section h2 {
+    margin: 0 0 8px 0;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    color: #2E5E3E;
+}
+
+section h3 {
+    margin: 12px 0 3px 0;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: #BC4749;
+}
+
+section p {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+}
+
+.price {
+    font-size: 15px;
+    font-weight: 700;
+    color: #2E5E3E;
+}
+
+/* ---------- Section: intro (text left, pictures right) ---------- */
+.intro-text {
+    float: left;
+    width: 55%;
+}
+
+.intro-text p {
+    max-width: 440px;
+}
+
+.intro-art {
+    float: right;
+    width: 38%;
+}
+
+/* ---------- Section: menu (three boxes side by side) ---------- */
+.bowl {
+    float: left;
+    width: 31%;
+    margin: 0 1%;
+    padding: 15px;
+    background-color: #FFFFFF;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+}
+
+/* ---------- Section: add-ons ---------- */
+.boost-text {
+    float: left;
+    width: 55%;
+}
+
+.boost-text ul {
+    margin: 10px 0 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.boost-text li {
+    margin-bottom: 6px;
+    padding-bottom: 6px;
+    overflow: hidden;
+    font-size: 17px;
+    border-bottom: 1px dotted #2E5E3E;
+}
+
+.boost-price {
+    float: right;
+    font-size: 15px;
+    font-weight: 700;
+    color: #2E5E3E;
+}
+
+.boost-art {
+    float: right;
+    width: 38%;
+}
+
+/* ---------- Blank photo spaces (empty until I add my images) ---------- */
+.blank-space {
+    max-width: 100%;
+    background-color: #E3D8B8;
+    border: 2px dashed #A7C957;
+}
+
+.blank-space img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bowl-photo {
+    width: 100%;
+    height: 150px;
+    margin: 0 0 8px 0;
+}
+
+.salad-bowl-space {
+    width: 100%;
+    height: 240px;
+    margin: 0 0 15px 0;
+}
+
+.peas-space {
+    width: 110px;
+    height: 110px;
+}
+
+.square-photo {
+    width: 220px;
+    height: 220px;
+}
+
+.video-space {
+    width: 100%;
+    height: 340px;
+}
+
+.video-space iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+	
+	.video-space video {
+		display: block
+	    width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+/* ---------- Section: find us (Google Map) ---------- */
+.map {
+    display: block;
+    width: 100%;
+    height: 300px;
+    border: 0;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+}
+
+/* ---------- Footer ---------- */
+footer {
+    margin: 0 0 30px 0;
+    padding: 20px 35px;
+    background-color: #1F3D2B;
+}
+
+footer p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.4;
+    color: #F2E8CF;
+}
+/* ---------- Phone layout (screens 700px wide or smaller) ----------
+   The columns stop floating and stack into one column, and the
+   cream panels slide down so the background photo shows at the top. */
+@media (max-width: 700px) {
+    #wrapper {
+        padding: 0 25px;
+    }
+
+    header {
+        padding-top: 40px;
+    }
+
+    header h1 {
+        float: none;
+        font-size: 44px;
+    }
+
+    main {
+        display: block;
+        margin-top: 150px; /* leaves room for the salad photo to show at the top */
+    }
+
+    header nav {
+        float: none;
+        margin-top: 15px;
+    }
+
+    header nav li {
+        margin: 0 8px 8px 0;
+    }
+
+    header nav a {
+        padding: 6px 14px;
+        font-size: 16px;
+    }
+
+    section {
+        padding: 25px 20px;
+    }
+
+    section h2 {
+        font-size: 30px;
+    }
+
+    .intro-text,
+    .intro-art,
+    .boost-text,
+    .boost-art {
+        float: none;
+        width: 100%;
+    }
+
+    .intro-art,
+    .boost-art {
+        margin-top: 15px;
+    }
+
+    .bowl {
+        float: none;
+        width: 100%;
+        margin: 0 0 15px 0;
+    }
+
+	.video-space {
+		height: 220px;
+	}
+	
+	.map {
+		height: 250px;
+	}
+</style>
 </head>
 
 <body>
-	<header>
-		<wrapper class="topwrapper">
-		<img src="logo.png" class="logo" />
-		<h1>IHOP</h1>
-		</wrapper>
-		</header>
-	<wrapper>
-		
-	<main>
-		<h2>Free pancakes</h2>
-		<img src="banner.jpg" class="banner" />
-		<h3>Menu</h3>
-		<ul>
-		<li>Menu Item<br />
-		<img src="menu1.jpg" class="menu"/>	</li>
-		<li>Menu Item<br />
-		<img src="menu1.jpg" class="menu"/>	</li>
-		<li>Menu Item<br /> <img src="menu1.jpg" class="menu"/></li>
-		</ul>
-		<h3>Location</h3>
-		<!-- 
-		Copy-and-paste Google Map below
-		--> 
-		<h3>Contact Us</h3>
-		<ul>
-		<li>786-520-7368</li>
-		<li>email@company.com</li>
-		</ul>
-		
-		</main>
-	<footer><p>&copy; 2026, Geraldine Garcia.</p>
-<p>This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.</p></footer>
-	</wrapper>
+<div id="wrapper">
+
+    <header>
+        <h1>Green Bowl<br>Salad Co.</h1>
+        <nav>
+            <ul>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#boost">Add-ons</a></li>
+                <li><a href="#watch">Watch</a></li>
+                <li><a href="#find">Find us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- INTRO -->
+        <section id="intro">
+            <div class="intro-text">
+                <h2>Fresh, local, and made while you wait.</h2>
+                <p>Every bowl starts with crisp greens picked this morning from farms right here in South Florida. Pick a bowl, add a boost, and we will have it ready in minutes.</p>
+                <!-- PHOTO SPACE: peas.png (irregular shape = PNG) -->
+                <div class="blank-space peas-space"><img src="images/peas.jpg" alt="Fresh pea pod"></div>
+            </div>
+            <div class="intro-art">
+                <!-- PHOTO SPACE: salad-bowl.png (irregular shape = PNG) -->
+                <div class="blank-space salad-bowl-space"><img src="salad-bowl.png" alt="Bowl of fresh salad"></div>
+            </div>
+        </section>
+
+        <!-- MENU -->
+        <section id="menu">
+            <h2>Today's Bowls</h2>
+
+            <div class="bowl">
+                <h3>The Garden Crunch</h3>
+                <!-- PHOTO SPACE: garden-crunch.jpg -->
+                <div class="blank-space bowl-photo"><img src="images/salad-photo.jpg" alt="The Garden Crunch salad bowl"></div>
+                <p>Romaine, cucumber, radish, cherry tomatoes, and sunflower seeds with a lemon vinaigrette.</p>
+                <span class="price">$9.50</span>
+            </div>
+
+            <div class="bowl">
+                <h3>Mango Sunrise</h3>
+                <!-- PHOTO SPACE: mango-sunrise.jpg -->
+                <div class="blank-space bowl-photo"><img src="images/mango-sunrise.jpg" alt="Mango Sunrise salad bowl"></div>
+                <p>Baby spinach, fresh mango, red onion, avocado, and toasted almonds with a lime dressing.</p>
+                <span class="price">$11.00</span>
+            </div>
+
+            <div class="bowl">
+                <h3>The Big Green</h3>
+                <!-- PHOTO SPACE: big-green.jpg -->
+                <div class="blank-space bowl-photo"><img src="images/big-green.jpg" alt="The Big Green salad bowl"></div>
+                <p>Kale, quinoa, chickpeas, roasted peppers, and feta with a garlic herb dressing.</p>
+                <span class="price">$12.25</span>
+            </div>
+        </section>
+
+        <!-- ADD-ONS -->
+        <section id="boost">
+            <div class="boost-text">
+                <h2>Add a Boost</h2>
+                <p>Make any bowl a full meal.</p>
+                <ul>
+                    <li>Grilled chicken<span class="boost-price">+$3.50</span></li>
+                    <li>Marinated tofu<span class="boost-price">+$2.50</span></li>
+                    <li>Hard-boiled egg<span class="boost-price">+$1.50</span></li>
+                    <li>Extra avocado<span class="boost-price">+$2.00</span></li>
+                </ul>
+            </div>
+            <div class="boost-art">
+                <!-- PHOTO SPACE: photo.jpg (square = JPEG) -->
+                <div class="blank-space square-photo"><img src="add-ons.png" alt="Fresh salad ingredients"></div>
+            </div>
+        </section>
+
+        <!-- VIDEO -->
+        <section id="watch">
+            <h2>See how we make it</h2>
+            <!-- VIDEO SPACE: paste my YouTube embed code (the iframe) between the div tags -->
+            <div class="video-space">
+			<video controls>
+				<source src="images/salad-video.mp4" type="video/mp4">
+						</video>
+				</div>
+        </section>
+
+        <!-- MAP -->
+        <section id="find">
+            <h2>Find us</h2>
+            <p>Stop by for lunch, we are open every day from 10:00 am to 8:00 pm.</p>
+            <iframe class="map" src="https://maps.google.com/maps?q=Miami,+Florida&amp;output=embed" title="Map showing where to find Green Bowl Salad Co." loading="lazy"></iframe>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026, Your Name. This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.</p>
+    </footer>
+
+</div>
 </body>
 </html>
